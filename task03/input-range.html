@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inupt-range</title>
+</head>
+<style>
+    body {
+        font-family: 'Myriad-Pro', 'myriad', helvetica, arial, sans-serif;
+        text-align: center;
+    }
+    input {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    output {
+        display: block;
+        font-size: 5.5em;
+        font-weight: bold;
+    }
+    input[type="range"]:before {
+        content: attr(min);
+        padding-right: 5px;
+    }
+    input[type="range"]:after {
+        padding-left: 5px;
+        content: attr(max);
+    }
+</style>
+<body>
+    <form method="post">
+        <h1>Total Recall Awesomness Gauge</h1>
+        <input type="range" name="range" min="0" max="10" step="1" value="">
+        <output name="result"></output>
+    </form>
+    <a href="javascript: alert('hah');" data-id="2312">测试</a>
+    <script>
+        (function(){
+            let f = document.forms[0];
+            let range = f['range'];
+            let result = f['result'];
+            console.log(localStorage);
+            cachedRangeValue = localStorage.rangeValue ? localStorage.rangeValue : 5;
+
+            range.value = cachedRangeValue;
+            result.value = cachedRangeValue;
+
+            range.addEventListener('mouseup', function(){
+                alert(range.value);
+                localStorage ? (localStorage.rangeValue = range.value) : alert('数据丢失');
+            });
+            console.log(localStorage);
+            range.addEventListener('change', function(){
+                result.value = range.value;
+            });
+        })();
+    </script>
+</body>
+</html>

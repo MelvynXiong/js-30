@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5fdfe0e-c6a3-4bad-bc95-e31e7c1448bf" name="Default" comment="" />
+    <list default="true" id="69ac29a1-b304-4189-a2c5-d2278b6144df" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -19,15 +19,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/JS-CSS-Clock.html" />
-        <option value="$PROJECT_DIR$/JS-CSS-Clock.css" />
+        <option value="$PROJECT_DIR$/CSS-variables.html" />
       </list>
     </option>
   </component>
@@ -38,9 +36,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="564" />
+    <option name="x" value="286" />
     <option name="y" value="23" />
-    <option name="width" value="578" />
+    <option name="width" value="795" />
     <option name="height" value="709" />
   </component>
   <component name="ProjectView">
@@ -52,8 +50,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="task02" type="b2602c69:ProjectViewProjectNode" />
-              <item name="task02" type="462c0819:PsiDirectoryNode" />
+              <item name="task03" type="b2602c69:ProjectViewProjectNode" />
+              <item name="task03" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -66,7 +64,6 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
@@ -91,22 +88,22 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f5fdfe0e-c6a3-4bad-bc95-e31e7c1448bf" name="Default" comment="" />
-      <created>1528439143638</created>
+      <changelist id="69ac29a1-b304-4189-a2c5-d2278b6144df" name="Default" comment="" />
+      <created>1528612151399</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1528439143638</updated>
-      <workItem from="1528439146332" duration="9529000" />
+      <updated>1528612151399</updated>
+      <workItem from="1528612152691" duration="9321000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9529000" />
+    <option name="totallyTimeSpent" value="9321000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="564" y="23" width="578" height="709" extended-state="0" />
+    <frame x="286" y="23" width="795" height="709" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3246154" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18113208" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -132,17 +129,17 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/JS-CSS-Clock.css">
+    <entry file="file://$PROJECT_DIR$/input-range.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="35" column="16" lean-forward="true" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+        <state relative-caret-position="-231">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS-CSS-Clock.html">
+    <entry file="file://$PROJECT_DIR$/CSS-variables.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+        <state relative-caret-position="1064">
+          <caret line="71" column="7" lean-forward="true" selection-start-line="71" selection-start-column="7" selection-end-line="71" selection-end-column="7" />
         </state>
       </provider>
     </entry>
