@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Cardio</title>
+</head>
+<body>
+    <script>
+        const inventors = [{
+                first: 'Albert',
+                last: 'Einstein',
+                year: 1879,
+                passed: 1955
+            },
+            {
+                first: 'Isaac',
+                last: 'Newton',
+                year: 1643,
+                passed: 1727
+            },
+            {
+                first: 'Galileo',
+                last: 'Galilei',
+                year: 1564,
+                passed: 1642
+            },
+            {
+                first: 'Marie',
+                last: 'Curie',
+                year: 1867,
+                passed: 1934
+            },
+            {
+                first: 'Johannes',
+                last: 'Kepler',
+                year: 1571,
+                passed: 1630
+            },
+            {
+                first: 'Nicolaus',
+                last: 'Copernicus',
+                year: 1473,
+                passed: 1543
+            },
+            {
+                first: 'Max',
+                last: 'Planck',
+                year: 1858,
+                passed: 1947
+            },
+            {
+                first: 'Katherine',
+                last: 'Blodgett',
+                year: 1898,
+                passed: 1979
+            },
+            {
+                first: 'Ada',
+                last: 'Lovelace',
+                year: 1815,
+                passed: 1852
+            },
+            {
+                first: 'Sarah E.',
+                last: 'Goode',
+                year: 1855,
+                passed: 1905
+            },
+            {
+                first: 'Lise',
+                last: 'Meitner',
+                year: 1878,
+                passed: 1968
+            },
+            {
+                first: 'Hanna',
+                last: 'Hammarström',
+                year: 1829,
+                passed: 1909
+            }
+        ];
+
+        const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry',
+            'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert',
+            'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester',
+            'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano',
+            'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle',
+            'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose',
+            'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black Elk', 'Blair, Robert',
+            'Blair, Tony', 'Blake, William'
+        ];
+
+        const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car',
+            'truck', 'pogostick'
+        ];
+        //筛选16世纪的发明家
+        let fifteen = inventors.filter(val => (val.year>1499 && val.year<1600));
+        console.table(fifteen);
+        //展示姓名
+        const nameArr = inventors.map(inventor => [inventor.first, inventor.last]);
+        const name = inventors.map(inventor => `${inventor.first} ${inventor.last}`)
+        console.table(nameArr);
+        console.table(name);
+        //按照年龄排序
+        inventors.sort((v1,v2)=>((v2.passed-v2.year) - (v1.passed-v1.year)));
+        console.table(inventors);
+        //所有发明家加起来一共活了多少岁
+        let sumYear = inventors.reduce((accumulator,cur) => accumulator+(cur.passed-cur.year),0);
+        console.log(sumYear);
+        //按照姓氏排序
+        people.sort((v1, v2) => {
+            const v1Name = v1.split(',');
+            const v2Name = v2.split(',');
+            return v1Name[1] < v2Name[1] ? -1 : 1;
+        });
+        console.log(people);
+        //统计数组中各物品的数量
+        const stat = {};
+        // data.forEach(val=>{
+        //     if(stat[val]) {
+        //         stat[val]++;
+        //     } else {
+        //         stat[val] = 1;
+        //     }
+        // });
+        data.forEach(val=>(stat[val] ? stat[val]++ : stat[val]=1));
+        console.log(stat);
+    </script>
+</body>
+</html>
