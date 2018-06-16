@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            background-color: rgb(145,182,195);
+            font-family: 'Kaiti', 'SimHei', 'Hiragino Sans GB ', 'helvetica neue';
+            font-size: 20px;
+            font-weight: 200;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+        .search-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .search {
+            position: relative;
+            top: 10px;
+            left: 10px;
+            width: 120%;
+            margin: 0;
+            padding: 20px;
+            border: 10px solid #f7f7f7;
+            border-radius: 5px;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0,0,0,0.12),
+                        inset 0 0 2px rgba(0,0,0,0.19);
+            text-align: center;
+            font-size: 40px;
+            font-family: 'Kaiti', 'helvetica neue';
+        }
+        .suggestions {
+            position: relative;
+            top: 7px;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            list-style: none;
+        }
+        .suggestions li {
+            margin: 0;
+            padding: 20px;
+            border-bottom: 1px solid #d8d8d8;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.14);
+        }
+        .suggestions li:nth-child(even) {
+            transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+            background: linear-gradient(#fff, #efefef);
+        }
+        .suggestions li:nth-child(odd) {
+            transform: perspective(100px) rotateX(-3deg) translateY(3px);
+            background: linear-gradient(to top, #fff, #efefef);
+        }
+        span.title {
+            margin-top: 5px;
+            margin-right: 20px;
+            text-align: right;
+            color: #7c8e94;
+        }
+        span.hl {
+            color: #008000;
+        }
+    </style>
+</head>
+<body>
+    <form class="search-form">
+        <input type="text" class="search" placeholder="诗人名字，关键字">
+        <ul class="suggestions">
+            <li>输入词句，找一首诗</li>
+            <li>输入词句，找一首诗</li>
+            <li>输入词句，找一首诗</li>
+            <li>输入词句，找一首诗</li>
+            <li>输入词句，找一首诗</li>
+        </ul>
+    </form>
+    <script>
+        //获取数据
+        const endpoint = 'https://gist.githubusercontent.com/liyuechun/f00bb31fb8f46ee0a283a4d182f691b4/raw/3ea4b427917048cdc596b38b67b5ed664605b76d/TangPoetry.json';
+        const poetrys = [];
+        fetch(endpoint)
+            .then(blob => {
+                return blob.json();
+            })
+            .then(data => {
+                //console.log(data);
+                poetrys.push(...data);
+            });
+        console.log(poetrys);
+        //开始匹配
+        const search = document.querySelector('.search');
+        const suggestions = document.querySelector('.suggestions');
+        let findMatches = function(wordToMatch, poetrys) {
+            return poetrys.filter(poet => {
+                const regex = new RegExp(wordToMatch, 'gi');
+                const author = poet.detail_author.join('');
+                //console.log(!!poet.detail_text.match(regex));
+                return poet.detail_text.match(regex) || author.match(regex) || poet.title.match(regex);
+            });
+        }
+        let displayMatches = function() {
+            const matches = findMatches(this.value, poetrys);
+            const regex = new RegExp(this.value, 'gi');
+
+            const html = matches.map(poet => {
+                const text = poet.detail_text.replace(regex, `<span class="hl">${this.value}</span>`);
+                const title = poet.title.replace(regex, `<span class="hl">${this.value}</span>`);
+                const detail_author = poet.detail_author[0].replace(regex, `<span class="hl">${this.value}</span>`);
+                return `
+                <li>
+                    <span class="poet">${text}</span>
+                    <span class="title">${title} - ${detail_author}</span>
+                </li>
+                `
+            }).join('');
+
+            suggestions.innerHTML = html;
+        }
+        search.addEventListener('change', displayMatches);
+        search.addEventListener('keyup', displayMatches);
+
+    </script>
+</body>
+</html>
