@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Cardio 02</title>
+</head>
+<body>
+<script>
+    const people = [
+        { name: 'Wes', year: 1988 },
+        { name: 'Kait', year: 1986 },
+        { name: 'Irv', year: 1970 },
+        { name: 'Lux', year: 2015 }
+    ];
+
+    const comments = [
+        { text: 'Love this!', id: 523423 },
+        { text: 'Super good', id: 823423 },
+        { text: 'You are the best', id: 2039842 },
+        { text: 'Ramen is my fav food ever', id: 123523 },
+        { text: 'Nice Nice Nice!', id: 542328 }
+    ];
+    const isSomeoneOver19 = people.some(value => (2018-value.year) >= 19 );
+    const isEveryoneOver19 = people.every(value => (2018-value.year) >= 19)
+    const exist = comments.find(value => value.id === 823423);
+    const existId = comments.findIndex(value => value.id===823423);
+    console.log(isSomeoneOver19);
+    console.log(isEveryoneOver19);
+    console.log(exist);
+    console.log(existId);
+    comments.splice(existId,1);
+    console.table(comments);
+</script>
+</body>
+</html>
