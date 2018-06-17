@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Console API</title>
+</head>
+<body>
+<p></p>
+<script>
+    console.log("I'm a String %s", "xiong");
+    console.log("I'm a int number: %d", 25);
+    console.log("I'm a float number %f", 25,09);
+    let dog = {name:"lucky", age: 5};
+    console.log("%o", dog);
+    console.log("%c3D Text"," text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:5em");
+
+    //清空console面板内容
+    //console.clear();
+
+    console.warn("用于输出警示信息");
+    // Error :|
+    console.error("用于输出错误信息");
+    // Info
+    console.info("用于输出提示性信息");
+    //debug
+    console.debug("用于输出调试信息");
+
+    const p = document.querySelector('p');
+    console.log(p);
+    console.dir(p);
+
+    //分组打印
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+    dogs.forEach(dog => {
+        //console.group(`${dog.name}`);
+        console.groupCollapsed(`${dog.name}`);  // 列表默认叠起状态
+        console.log(`${dog.name}`);
+        console.log(`${dog.age}`);
+        console.log(`${dog.name} 有 ${dog.age} 岁了`);
+        console.groupEnd();
+    });
+
+    console.time('fetch my data');
+    fetch("https://api.github.com/users/soyaine")
+        .then(data => data.json())
+        .then(data => {
+            console.timeEnd('fetch my data');
+            console.log(data);
+        });
+</script>
+</body>
+</html>
