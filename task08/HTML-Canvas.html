@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Canvas</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas {
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="drawing" width="800" height="800">a drawing of something!</canvas>
+
+    <script>
+        const canvas = document.getElementById('drawing');
+        if(canvas.getContext) {
+            let context = drawing.getContext('2d');
+            // context.fillStyle = "#0000ff";
+            // context.fillRect(10,10,50,50);
+            // context.fillStyle = 'rgba(0,255,0,0.5)';
+            // context.fillRect(30,30,50,50);
+            // context.clearRect(40,40,10,10);
+            // context.strokeStyle = "rgba(0,255,0,0.5)";
+            // context.strokeRect(30,30,50,50);
+            // context.beginPath();
+            //
+            // //外圆
+            // context.arc(100,100,99,0, 2*Math.PI, false);
+            // //内圆
+            // context.moveTo(190,100);
+            // context.arc(100,100,90,0, 2*Math.PI, false);
+            //
+            // context.moveTo(100,100);
+            // context.lineTo(100, 15);
+            //
+            // context.moveTo(100,100);
+            // context.lineTo(35, 100);
+            //
+            // context.stroke();
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            //初始化起点和标记绘画状态的变量
+            let isDrawing = false;
+            let lastX = 0;
+            let lastY = 0;
+
+            context.lineWidth = 90;
+            context.lineCap = "round";
+            context.lineJoin = "round";
+            context.strokeStyle = "#f00";
+            context.fillStyle = "#f00";
+
+            let hue = 0;
+            let direction = true;
+
+
+            let draw = function(e) {
+                if(!isDrawing) return;
+
+                let x = e.offsetX;
+                let y = e.offsetY;
+
+                //彩虹效果
+                if(hue == 360) hue = 0;
+                context.strokeStyle = `hsl(${hue}, 90%, 50%)`
+                hue++;
+
+                //控制笔触大小
+
+                if(context.lineWidth > 120 || context.lineWidth < 10) {
+                    direction = !direction;
+                }
+                if(direction) {
+                    context.lineWidth++;
+                } else {
+                    context.lineWidth--;
+                }
+                //开始绘制路径
+                context.beginPath();
+                context.moveTo(lastX, lastY);
+                context.lineTo(x,y);
+                context.stroke();
+                [lastX,lastY] = [x,y];
+
+            }
+
+            canvas.addEventListener('mousedown', e => {
+                isDrawing = true;
+                [lastX, lastY] = [e.offsetX, e.offsetY];
+            });
+            canvas.addEventListener('mousemove', draw);
+            canvas.addEventListener('mouseup', ()=> isDrawing = false);
+            canvas.addEventListener('mouseout', () => isDrawing = false);
+        }
+    </script>
+</body>
+</html>
