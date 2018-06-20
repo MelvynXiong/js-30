@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Checkbox</title>
+    <style>
+        html {
+            font-family: sans-serif;
+            background: #ffc600;
+        }
+        .inbox {
+            max-width: 400px;
+            margin: 50px auto;
+            border-radius: 5px;
+            background: #fff;
+            box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+        }
+        .item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        .item:last-child {
+            border-bottom: 0;
+        }
+        input:checked + p {
+            background: #f9f9f9;
+            text-decoration: line-through;
+        }
+        input[type='checkbox'] {
+            margin: 20px;
+        }
+        p {
+            flex: 1;
+            margin: 0;
+            padding: 20px;
+            font-family: 'helvetica neue';
+            font-size: 20px;
+            font-weight: 200;
+            border-left: 1px solid #d1e2ff;
+            transition: background 0.2s;
+        }
+        .details {
+            text-align: center;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+<!--
+The following is a common layout you would see in an email client.
+When a user clicks a checkbox, holds Shift, and then clicks another checkbox a few rows down, all the checkboxes inbetween those two checkboxes should be checked.
+-->
+<div class="inbox">
+    <div class="item">
+        <input type="checkbox">
+        <p>This is an inbox layout.</p>
+    </div>
+    <div class="item">
+        <input type="checkbox">
+        <p>Check one item</p>
+    </div>
+    <div class="item">
+        <input type="checkbox">
+        <p>Hold down your Shift key</p>
+    </div>
+    <div class="item">
+        <input type="checkbox">
+        <p>Check a lower item</p>
+    </div>
+    <div class="item">
+        <input type="checkbox">
+        <p>Everything inbetween should also be set to checked</p>
+    </div>
+    <div class="item">
+        <input type="checkbox">
+        <p>Try do it with out any libraries</p>
+    </div>
+    <div class="item">
+        <input type="checkbox">
+        <p>Just regular JavaScript</p>
+    </div>
+    <div class="item">
+        <input type="checkbox">
+        <p>Good Luck!</p>
+    </div>
+    <div class="item">
+        <input type="checkbox">
+        <p>Don't forget to tweet your result!</p>
+    </div>
+</div>
+<script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const boxArr = Array.form(checkboxes);
+    let lastChecked;
+    //若使用该方法， 初次加载页面时，
+    // 按住 Shift 再点击某一项，此项之后的元素都会被选中。
+    // 此外，对于取消选中，无法批量操作
+    // 且无法保证起始点是被选中的点
+    let handleCheck = function(e) {
+        //check if they had the shift key down
+        //And check that they are checking it
+        let inBetween = false;
+        if(e.shiftKey && this.checked) {
+            checkboxes.forEach(checkbox => {
+                //console.log(checkbox);
+                if(checkbox === this || checkbox === lastChecked) {
+                    inBetween = !inBetween;
+                }
+                if(inBetween) {
+                    checkbox.checked = true;
+                }
+            });
+        }
+        lastChecked = this;
+        //lastChecked = this.checked ? this : null;
+    }
+
+    //改进方法一
+    let readyToBegin = false;
+    let startChecked;
+    let isBegin = false;
+    let handleCheckUpdate01 = function(e) {
+        if(e.shiftKey) {
+            if(readyToBegin) {
+                checkboxes.forEach(box => {
+                    if(box === startChecked || box === this) {
+                        isBegin = !isBegin;
+                    }
+                    if(isBegin) {
+                        box.checked = true;
+                    }
+                });
+            } else {
+                readyToBegin = this.checked;
+                startChecked = this.checked ? this : null;
+            }
+        } else {
+            readyToBegin = this.checked;
+            startChecked = this.checked ? this : null;
+        }
+    }
+    //checkboxes.forEach(checkbox => checkbox.addEventListener('click',handleCheck));
+    //checkboxes.forEach(checkbox => checkbox.addEventListener('click',handleCheckUpdate01));
+
+    //改进方法二
+    //onOff表示 选中 或 取消选中
+    let onOff = false;
+    let handle = function(e) {
+        if(e.shiftKey) {
+            let start = boxArr.indexOf(this);
+            let end = boxArr.indexOf(lastChecked);
+        }
+        
+    }
+    boxArr.forEach(box => box.addEventListener('click', handle));
+</script>
+</body>
+</html>

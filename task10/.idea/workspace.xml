@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f85e1824-ba0e-4cf6-a80b-9851d2d01dd2" name="Default" comment="" />
+    <list default="true" id="64d1e5cc-99b1-4b8b-a92e-f32132d54c08" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -14,11 +14,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Console-API.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Console-API.html">
+      <file leaf-file-name="JS-Checkbox.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JS-Checkbox.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+            <state relative-caret-position="394">
+              <caret line="149" column="50" selection-start-line="149" selection-start-column="50" selection-end-line="149" selection-end-column="50" />
+              <folding>
+                <element signature="e#3432#4050#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -35,7 +38,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Console-API.html" />
+        <option value="$PROJECT_DIR$/JS-Checkbox.html" />
       </list>
     </option>
   </component>
@@ -46,8 +49,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="730" />
-    <option name="y" value="23" />
+    <option name="x" value="708" />
+    <option name="y" value="70" />
     <option name="width" value="554" />
     <option name="height" value="709" />
   </component>
@@ -56,7 +59,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="task10" type="b2602c69:ProjectViewProjectNode" />
+              <item name="task10" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -88,23 +101,23 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f85e1824-ba0e-4cf6-a80b-9851d2d01dd2" name="Default" comment="" />
-      <created>1529260074791</created>
+      <changelist id="64d1e5cc-99b1-4b8b-a92e-f32132d54c08" name="Default" comment="" />
+      <created>1529262172045</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1529260074791</updated>
-      <workItem from="1529260076237" duration="1491000" />
+      <updated>1529262172045</updated>
+      <workItem from="1529262173458" duration="8768000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1491000" />
+    <option name="totallyTimeSpent" value="8768000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="730" y="23" width="554" height="709" extended-state="0" />
+    <frame x="715" y="23" width="554" height="709" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24909747" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24909747" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -130,10 +143,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Console-API.html">
+    <entry file="file://$PROJECT_DIR$/JS-Checkbox.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+        <state relative-caret-position="394">
+          <caret line="149" column="50" selection-start-line="149" selection-start-column="50" selection-end-line="149" selection-end-column="50" />
+          <folding>
+            <element signature="e#3432#4050#0" />
+          </folding>
         </state>
       </provider>
     </entry>
