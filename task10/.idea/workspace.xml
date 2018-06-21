@@ -17,11 +17,8 @@
       <file leaf-file-name="JS-Checkbox.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JS-Checkbox.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="149" column="50" selection-start-line="149" selection-start-column="50" selection-end-line="149" selection-end-column="50" />
-              <folding>
-                <element signature="e#3432#4050#0" />
-              </folding>
+            <state relative-caret-position="289">
+              <caret line="143" lean-forward="true" selection-start-line="143" selection-end-line="143" />
             </state>
           </provider>
         </entry>
@@ -49,8 +46,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="708" />
-    <option name="y" value="70" />
+    <option name="x" value="699" />
+    <option name="y" value="23" />
     <option name="width" value="554" />
     <option name="height" value="709" />
   </component>
@@ -106,15 +103,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529262172045</updated>
-      <workItem from="1529262173458" duration="8768000" />
+      <workItem from="1529262173458" duration="13369000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8768000" />
+    <option name="totallyTimeSpent" value="13369000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="715" y="23" width="554" height="709" extended-state="0" />
+    <frame x="699" y="23" width="554" height="709" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24909747" />
@@ -145,11 +142,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/JS-Checkbox.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="149" column="50" selection-start-line="149" selection-start-column="50" selection-end-line="149" selection-end-column="50" />
-          <folding>
-            <element signature="e#3432#4050#0" />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="143" lean-forward="true" selection-start-line="143" selection-end-line="143" />
         </state>
       </provider>
     </entry>

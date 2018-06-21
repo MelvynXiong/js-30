@@ -91,7 +91,7 @@ When a user clicks a checkbox, holds Shift, and then clicks another checkbox a f
 </div>
 <script>
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    const boxArr = Array.form(checkboxes);
+    const boxArr = Array.from(checkboxes);
     let lastChecked;
     //若使用该方法， 初次加载页面时，
     // 按住 Shift 再点击某一项，此项之后的元素都会被选中。
@@ -117,43 +117,44 @@ When a user clicks a checkbox, holds Shift, and then clicks another checkbox a f
     }
 
     //改进方法一
-    let readyToBegin = false;
-    let startChecked;
-    let isBegin = false;
+    //onOff表示 选中 或 取消选中
+    //增加批量取消的功能
+
+    //函数触发的顺序不同 在于 是不是先按shift
+    //并没有解决 按住 Shift 再点击某一项，此项之后的元素都会被选中
+    let onOff = false;
     let handleCheckUpdate01 = function(e) {
+        let inBetween = false;
         if(e.shiftKey) {
-            if(readyToBegin) {
-                checkboxes.forEach(box => {
-                    if(box === startChecked || box === this) {
-                        isBegin = !isBegin;
-                    }
-                    if(isBegin) {
-                        box.checked = true;
-                    }
-                });
-            } else {
-                readyToBegin = this.checked;
-                startChecked = this.checked ? this : null;
-            }
-        } else {
-            readyToBegin = this.checked;
-            startChecked = this.checked ? this : null;
+            onOff = lastChecked.checked;
+            checkboxes.forEach(checkbox => {
+                if(checkbox === this || checkbox === lastChecked) {
+                    inBetween = !inBetween;
+                }
+                if(inBetween) {
+                    checkbox.checked = onOff;
+                }
+            });
         }
+        lastChecked = this;
     }
     //checkboxes.forEach(checkbox => checkbox.addEventListener('click',handleCheck));
     //checkboxes.forEach(checkbox => checkbox.addEventListener('click',handleCheckUpdate01));
-
     //改进方法二
-    //onOff表示 选中 或 取消选中
-    let onOff = false;
+
     let handle = function(e) {
+        if(!lastChecked) lastChecked = this;
         if(e.shiftKey) {
+            onOff = lastChecked.checked;
             let start = boxArr.indexOf(this);
             let end = boxArr.indexOf(lastChecked);
+            boxArr.slice(Math.min(start, end), Math.max(start, end) + 1)
+                .forEach(input => input.checked = onOff);
         }
-        
+        lastChecked = this;
     }
-    boxArr.forEach(box => box.addEventListener('click', handle));
+    checkboxes.forEach(checkbox => checkbox.addEventListener('click',handle));
+
 </script>
 </body>
 </html>
