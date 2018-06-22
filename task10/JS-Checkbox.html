@@ -143,6 +143,7 @@ When a user clicks a checkbox, holds Shift, and then clicks another checkbox a f
     //改进方法二
 
     let handle = function(e) {
+        //用来初始化
         if(!lastChecked) lastChecked = this;
         if(e.shiftKey) {
             onOff = lastChecked.checked;

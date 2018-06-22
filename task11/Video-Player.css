@@ -1,0 +1,136 @@
+/*全局设置border-box*/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    /*设置body的基础高度*/
+    min-height: 100vh;
+    background: #7a419b;
+    background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%);
+    background-size: cover;
+}
+.player {
+    position: relative;
+    overflow: hidden;
+    max-width: 750px;
+    font-size: 0;
+    border: 5px solid rgba(255,0,0,0.2);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+/* This css is only applied when fullscreen is active. */
+.player:fullscreen {
+    max-width: none;
+    width: 100%;
+}
+.player_video {
+    width: 100%;
+}
+.player_controls {
+    display: flex;
+    /*默认为nowrap 宽度超过时不换行 会压缩盒子宽度*/
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(100%) translateY(-5px);
+    transition: all .3s;
+    background: rgba(0,0,0,0.1);
+}
+.player:hover .player_controls {
+    transform: translateY(0);
+}
+.player:hover .progress {
+    height: 15px;
+}
+.player_controls > * {
+    flex: 1;
+}
+.player_button {
+    max-width: 50px;
+    padding: 0;
+    border: 0;
+    outline: none;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    background: none;
+    cursor: pointer;
+}
+.player_button:focus {
+    border-color: #ffc600;
+}
+.player_slider {
+    width: 10px;
+    height: 30px;
+}
+.progress {
+    flex: 10;
+    position: relative;
+    display: flex;
+    flex-basis: 100%;
+    height: 5px;
+    transition: height .3s;
+    background: rgba(0,0,0,0.5);
+    cursor: ew-resize;
+}
+.progress_filled {
+    width: 0;
+    background: #ffc600;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    background:transparent;
+    width: 100%;
+    margin: 0 5px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+    background: rgba(255,255,255,0.8);
+    border-radius: 1.3px;
+    border: 0.2px solid rgba(1, 1, 1, 0);
+}
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    background: #ffc600;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -3.5px;
+    box-shadow:0 0 2px rgba(0,0,0,0.2);
+}
+input[type=range]:focus::-wefbkit-slider-runnable-track {
+    background: #bada55;
+}
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+    background: #ffffff;
+    border-radius: 1.3px;
+    border: 0.2px solid rgba(1, 1, 1, 0);
+}
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    background: #ffc600;
+    cursor: pointer;
+}

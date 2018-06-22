@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Player</title>
+    <link rel="stylesheet" href="Video-Player.css">
+</head>
+<body>
+    <div class="player">
+        <video class="player_video viewer" src="Shape%20of%20You.mp4"></video>
+        <div class="player_controls">
+            <div class="progress">
+                <div class="progress_filled"></div>
+            </div>
+            <button class="player_button toggle" title="Toggle Play">►</button>
+            <input type="range" name="volume" class="player_slider" min="0" max="1" step="0.05" value="1">
+            <input type="range" name="playbackRate" class="player_slider" min="0.5" max="2" step="0.1" value="1">
+            <button data-skip="-10" class="player_button">« 10s</button>
+            <button data-skip="25" class="player_button">25s »</button>
+        </div>
+    </div>
+    <script>
+        const player = document.querySelector('.player');
+        const video = player.querySelector('.viewer');
+        const progress = player.querySelector('.progress');
+        const progressBar = player.querySelector('.progress_filled');
+        const toggle = player.querySelector('.toggle');
+        const skipButtons = player.querySelectorAll('[data-skip]');
+        const ranges = player.querySelectorAll('.player_slider');
+
+        //在此使用video[play]()和video[pause]()是因为，
+        // 使用中括号能够动态的传递变量进去，而使用点运算符不能传参。
+        let videoplay = function(e) {
+            const  method = video.paused ? 'play' : 'pause';
+            video[method]();
+        }
+        //播放按钮状态切换
+        let handleToggle = function() {
+            let icon = video.paused ? '►' : '❚ ❚';
+            toggle.textContent = icon;
+        }
+        //进度条
+        let filledUpdate = function() {
+            const portion = (this.currentTime/this.duration) * 100;
+            progressBar.style.width = `${portion}%`;
+        }
+        //音量大小和播放速度控制
+        let handlePlayerSlider = function(e) {
+            video[e.target.name] = e.target.value;
+        }
+        //快进快退
+        let handleSkip = function() {
+            let skiptime = parseFloat(this.dataset.skip);
+            video.currentTime += skiptime;
+        }
+        //拖拽进度条
+        let handlefilled = function(e) {
+            let price = (e.offsetX / progress.offsetWidth) * video.duration;
+            video.currentTime = price;
+        }
+
+        //事件监听video
+        //点击播放
+        video.addEventListener('click', videoplay);
+        //点击时 改变播放和暂停图标
+        video.addEventListener('play', handleToggle);
+        video.addEventListener('pause',handleToggle);
+        video.addEventListener('timeupdate', filledUpdate);
+
+        toggle.addEventListener('click', videoplay);
+        toggle.addEventListener('click', handleToggle);
+
+        //音量和播放速度滑动条事件监听
+        let mouseflag = false;
+        ranges.forEach(item => item.addEventListener('click', handlePlayerSlider));
+        ranges.forEach(item => item.addEventListener('mousedown', () => mouseflag = true));
+        ranges.forEach(item => item.addEventListener('mouseup', () => mouseflag = false));
+        ranges.forEach(item => item.addEventListener('mousemove', (e) => mouseflag && handlePlayerSlider(e)));
+
+        //快进按钮事件监听
+        skipButtons.forEach(item => item.addEventListener('click', handleSkip));
+
+        <!--播放事件轴拖拽监听-->
+        let filledflag = false;
+        progress.addEventListener('click',handlefilled);
+        progress.addEventListener('mousemove',(e) => filledflag && handlefilled(e));
+        progress.addEventListener('mousedown',() => filledflag = true);
+        progress.addEventListener('mouseup',() => filledflag = false);
+    </script>
+</body>
+</html>
