@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61251ecf-cd20-4258-838d-d6a0dcbe4a9b" name="Default" comment="" />
+    <list default="true" id="7941ae9e-6376-4384-9cdf-8938300741b0" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="task16.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/task16.html">
+      <file leaf-file-name="Sort Without Articles.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Sort Without Articles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+            <state relative-caret-position="415">
+              <caret line="49" column="45" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -35,7 +35,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/task16.html" />
+        <option value="$PROJECT_DIR$/Sort Without Articles.html" />
       </list>
     </option>
   </component>
@@ -46,8 +46,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="718" />
-    <option name="y" value="73" />
+    <option name="x" value="689" />
+    <option name="y" value="23" />
     <option name="width" value="526" />
     <option name="height" value="709" />
   </component>
@@ -57,17 +57,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="task16" type="b2602c69:ProjectViewProjectNode" />
-              <item name="task16" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -98,23 +88,23 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="61251ecf-cd20-4258-838d-d6a0dcbe4a9b" name="Default" comment="" />
-      <created>1529887907279</created>
+      <changelist id="7941ae9e-6376-4384-9cdf-8938300741b0" name="Default" comment="" />
+      <created>1529952370531</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1529887907279</updated>
-      <workItem from="1529887908830" duration="2247000" />
+      <updated>1529952370531</updated>
+      <workItem from="1529952371913" duration="3167000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2247000" />
+    <option name="totallyTimeSpent" value="3167000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="718" y="73" width="526" height="709" extended-state="0" />
+    <frame x="689" y="23" width="526" height="709" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24904943" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -140,10 +130,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/task16.html">
+    <entry file="file://$PROJECT_DIR$/Sort Without Articles.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+        <state relative-caret-position="415">
+          <caret line="49" column="45" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
         </state>
       </provider>
     </entry>
