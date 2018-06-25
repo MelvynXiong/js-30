@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bef6c9d-df17-4521-b5f6-37d7504661a6" name="Default" comment="" />
+    <list default="true" id="61251ecf-cd20-4258-838d-d6a0dcbe4a9b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -13,21 +13,29 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="task16.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/task16.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/image-scroll.css" />
-        <option value="$PROJECT_DIR$/image-scroll.html" />
+        <option value="$PROJECT_DIR$/task16.html" />
       </list>
     </option>
   </component>
@@ -38,9 +46,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="704" />
-    <option name="y" value="23" />
-    <option name="width" value="522" />
+    <option name="x" value="718" />
+    <option name="y" value="73" />
+    <option name="width" value="526" />
     <option name="height" value="709" />
   </component>
   <component name="ProjectView">
@@ -53,8 +61,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="task13" type="b2602c69:ProjectViewProjectNode" />
-              <item name="task13" type="462c0819:PsiDirectoryNode" />
+              <item name="task16" type="b2602c69:ProjectViewProjectNode" />
+              <item name="task16" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -66,7 +74,6 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
@@ -91,22 +98,23 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0bef6c9d-df17-4521-b5f6-37d7504661a6" name="Default" comment="" />
-      <created>1529736620307</created>
+      <changelist id="61251ecf-cd20-4258-838d-d6a0dcbe4a9b" name="Default" comment="" />
+      <created>1529887907279</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1529736620307</updated>
-      <workItem from="1529736621693" duration="5291000" />
+      <updated>1529887907279</updated>
+      <workItem from="1529887908830" duration="2037000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5291000" />
+    <option name="totallyTimeSpent" value="2037000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="704" y="23" width="522" height="709" extended-state="0" />
+    <frame x="718" y="73" width="526" height="709" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24904214" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -132,17 +140,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/image-scroll.html">
+    <entry file="file://$PROJECT_DIR$/task16.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="144" selection-start-line="144" selection-end-line="144" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image-scroll.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+        <state relative-caret-position="484">
+          <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
         </state>
       </provider>
     </entry>
