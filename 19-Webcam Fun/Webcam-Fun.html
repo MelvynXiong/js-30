@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get User Media Code Along!</title>
+    <style>
+        html {
+            box-sizing: border-box;
+            font-size: 10px;
+            background: #ffc600;
+        }
+        *,
+        *:after,
+        *:before {
+            box-sizing: inherit;
+        }
+        .photobooth {
+            margin: 2rem auto;
+            max-width: 150rem;
+            border-radius: 2px;
+            background: #fff;
+        }
+        .photobooth:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .photo {
+            float: left;
+        }
+        .player {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 200px;
+        }
+
+        .strip {
+            padding: 2rem;
+        }
+        .strip img {
+            width: 100px;
+            overflow-x: scroll;
+            padding: 0.8rem 0.8rem 2.5rem 2.5rem;
+            box-shadow: 0 0 3px rgba(0,0,0,0.2);
+            background: #fff;
+        }
+        .strip a:nth-child(5n+1) img { transform: rotate(10deg); }
+        .strip a:nth-child(5n+2) img { transform: rotate(-2deg); }
+        .strip a:nth-child(5n+3) img { transform: rotate(8deg); }
+        .strip a:nth-child(5n+4) img { transform: rotate(-11deg); }
+        .strip a:nth-child(5n+5) img { transform: rotate(12deg); }
+    </style>
+</head>
+<body>
+    <div class="photobooth">
+        <div class="controls">
+            <button onclick="takePhoto()">Take Photo</button>
+            <div class="rgba">
+                <label for="rmin">Red Min:</label>
+                <input type="range" min="0" max="255" id="rmin" name="rmin">
+                <label for="rmax">Red Max:</label>
+                <input type="range" min="0" max="255" id="rmax" name="rmax">
+                <br/>
+                <label for="gmin">Green Min:</label>
+                <input type="range" min="0" max="255" id="gmin" name="gmin">
+                <label for="gmax">Green Max:</label>
+                <input type="range" min="0" max="255" id="gmax" name="gmax">
+                <br/>
+                <label for="bmin">Blue Min:</label>
+                <input type="range" min="0" max="255" id="bmin" name="bmin">
+                <label for="bmax">Blue Max:</label>
+                <input type="range" min="0" max="255" id="bmax" name="bmax">
+            </div>
+        </div>
+        <canvas class="photo"></canvas>
+        <video class="player"></video>
+        <div class="strip"></div>
+    </div>
+    <audio class="snap" src="snap.mp3"></audio>
+    <script src="scripts.js"></script>
+</body>
+</html>
