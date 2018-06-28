@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech Detection</title>
+    <style>
+        html {
+            font-size: 10px;
+        }
+        body {
+            font-size: 20px;
+            font-weight: 200;
+            font-family: "helvetica neue";
+            background: #ffc600;
+        }
+        .words {
+            position: relative;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 1rem 2rem 1rem 5rem;
+            line-height: 3rem;
+            border-radius: 5px;
+            box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+            background: #fff;
+            /*注意0 4 是position的的值*/
+            background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
+            background-size: 100% 3rem;
+        }
+        p {
+            margin: 0 0 3rem 0;
+        }
+        .words:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 30px;
+            bottom: 0;
+            border: 1px solid;
+            border-color: transparent #e4e4e4;
+            width: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="words" contenteditable="true"></div>
+    <script>
+        //根据浏览器间的兼容性，需要同时添加前缀
+        window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        //实例化SpeechRecognition对象
+        const recognition = new SpeechRecognition();
+        // interimResults 属性的默认值是 false ，
+        // 代表语音识别器的返回值不会改变。
+        // 在这个演示中，我们把它设置为 true ，
+        // 这样随着我们的输入，识别结果有可能会改变。
+        // 仔细观看演示，灰色的文字是临时性的，有时会改变，而黑色文本是最终结果，不会改变。
+        recognition.interimResults = true;
+        //设置识别的语言
+        recognition.lang = 'en-US';
+        //创建<p>，添加到DOM tree
+        let p = document.createElement('p');
+        const words = document.querySelector('.words');
+        words.appendChild(p);
+
+        console.log(recognition);
+        //监听recognition的result事件，获取到语音输入的文字
+
+        recognition.addEventListener('result', (e) => {
+            const text = Array.from(e.results)
+            // e.results中保存的是识别的结果，本来并不是数组，
+            // 需要将其转换为数组，方便使用其map、join等方法。
+                .map(result => result[0]).map(result => result.transcript).join('');
+            //const text = results.replace(/goog/gi, '👌')；
+            console.log(e);
+            console.log(e.results);
+            console.log(e.results[0]);
+            console.log(e.results[0][0]);
+            p.textContent = text;
+
+            //如果当前一段输入结束了，也就是有了停顿，就会新建一个p标签
+            if(e.results[0].isFinal) {
+                p = document.createElement('p');
+                words.appendChild(p);
+            }
+        });
+        // 监听recognition的end事件，当前输入结束后，
+        // 再次开始，使其一直处于输入状态
+        recognition.addEventListener('end', recognition.start);
+        //开启recognition
+        recognition.start();
+        //数据结构
+        // {
+        //
+        //     results: {
+        //         0: {
+        //             0: {
+        //                 confidence: 0.695017397403717,
+        //                     transcript: "你好，世界"
+        //             },
+        //             isFinal:true,
+        //                 length:1
+        //         },
+        //         length:1
+        //     },
+        // }
+    </script>
+</body>
+</html>
