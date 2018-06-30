@@ -1,0 +1,89 @@
+html {
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'helvetica neue';
+    background: #eee;
+}
+body {
+    margin: 0;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+.site-wrap {
+    max-width: 700px;
+    margin: 70px auto;
+    padding: 40px;
+    background: #fff;
+    text-align: justify;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.05);
+    transform: scale(0.98);
+    transition: transform 0.5s;
+}
+.fixed-nav .site-wrap {
+    transform: scale(1);
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    background: url("image01.jpg") center bottom;
+    background-size: cover;
+}
+h1 {
+    color: #fff;
+    font-size: 7vw;
+    text-shadow: 3px 4px 0 rgba(0,0,0,0.2);
+}
+nav {
+    position: relative;
+    top: 0;
+    width: 100%;
+    transition: all 0.5s;
+    background: #000;
+    z-index: 1;
+}
+.fixed-nav nav {
+    position: fixed;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+}
+li.logo {
+    max-width: 0;
+    overflow: hidden;
+    font-size: 30px;
+    font-weight: 600;
+    transition: all .5s;
+    background: #fff;
+}
+.fixed-nav li.logo {
+    max-width: 500px;
+}
+li.logo a {
+    color: #000;
+}
+nav a {
+    padding: 20px;
+    color: #fff;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    text-decoration: none;
+}
