@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #4C4C4C url('900.jpeg');
+            background-size: cover;
+            font-family: sans-serif;
+        }
+        .wrapper {
+            width: 850px;
+            display: flex;
+        }
+        video {
+            box-shadow: 0 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .speed {
+            flex: 1;
+            margin: 10px;
+            border-radius: 50px;
+            box-shadow: 0 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+            background: #efefef;
+        }
+        .speed-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(100% - 4px);
+            height: 20%;
+            padding: 2px;
+            color: #fff;
+            text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+            background: linear-gradient(-170deg, #2376ae 0%, #c16ecf 100%);
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <video src="Shape%20of%20You.mp4" width="765" height="430" loop controls></video>
+    <div class="speed">
+        <div class="speed-bar">1X</div>
+    </div>
+</div>
+<script>
+    const speed = document.querySelector('.speed');
+    const bar = speed.querySelector('.speed-bar');
+    const video = document.querySelector('video');
+    function handleMove(e) {
+        const y = e.offsetY;
+        const percent = y / this.offsetHeight;
+        const min = 0.4;
+        const max = 4;
+        const height = Math.round(percent*100) + "%";
+        const playbackRate = percent * (max-min) + min;
+        bar.style.height = height;
+        bar.textContent = playbackRate.toFixed(2) + 'X';
+        video.playbackRate = playbackRate;
+        //console.log(this.offsetHeight)
+        //console.log(this.offsetTop);
+        //console.log(e.pageY - this.offsetTop;);
+        //console.log(e.offsetY);
+    }
+    speed.addEventListener('mousemove', handleMove);
+</script>
+</body>
+</html>
