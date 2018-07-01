@@ -1,0 +1,129 @@
+html {
+    box-sizing: border-box;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(45deg, hsla(340, 100%, 55%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
+    linear-gradient(135deg, hsla(225, 95%, 50%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
+    linear-gradient(225deg, hsla(140, 90%, 50%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
+    linear-gradient(315deg, hsla(35, 95%, 55%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);;
+}
+h2 {
+    margin-top: 0;
+    padding-top: .8em;
+}
+.dropdownBackground {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+    transform-origin: 50% 0;
+    background: #fff;
+
+    transition: all .3s, opacity .1s, transform .2s;
+    opacity: 0;
+}
+.arrow {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    transform: translateY(-50%) rotate(45deg);
+}
+.dropdownBackground.open {
+    opacity: 1;
+}
+nav {
+    position: relative;
+    perspective: 600px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.cool {
+    display: flex;
+    justify-content: center;
+}
+.cool > li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.cool > li > a {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #ffff00;
+    border-radius: 5px;
+    text-decoration: none;
+    background: rgba(0,0,0,0.2);
+}
+.dropdown {
+    position: absolute;
+    top: -20px;
+    padding: 20px;
+    border-radius: 2px;
+    overflow: hidden;
+    transition: all 0.5s;
+    transform: translateY(100px);
+    opacity: 0;
+    display: none;
+    will-change: opacity;
+}
+.trigger-enter .dropdown {
+    display: block;
+}
+.trigger-enter-active .dropdown {
+    opacity: 1;
+}
+
+.bio {
+    min-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.7;
+}
+.bio img {
+    margin-right: 20px;
+}
+
+.courses {
+    min-width: 300px;
+}
+.courses li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+}
+.dropdown a {
+    text-decoration: none;
+    color: #ffc600;
+}
+a.button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #fff;
+    background: #000;
+}
+.button[href*=twitter] {
+    background: #019FE9;
+}
+.button[href*=facebook] {
+    background: #3B5998;
+}
+.button[href*=courses] {
+    background: #ffc600;
+}

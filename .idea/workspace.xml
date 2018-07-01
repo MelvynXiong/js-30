@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30194cb3-a124-45c8-a624-95327fa8dba4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/25-Event Capture/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/26-Stripe Follow Along Nav/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/26-Stripe Follow Along Nav/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -14,13 +17,32 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/26-Stripe Follow Along Nav/style.css">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="930">
+                    <caret line="78" column="25" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/25-Event Capture/index.html">
+        <entry file="file://$PROJECT_DIR$/26-Stripe Follow Along Nav/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+            <state relative-caret-position="308">
+              <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -50,6 +72,9 @@
         <option value="$PROJECT_DIR$/24-Sticky Nav/style.css" />
         <option value="$PROJECT_DIR$/24-Sticky Nav/index.html" />
         <option value="$PROJECT_DIR$/25-Event Capture/index.html" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/26-Stripe Follow Along Nav/style.css" />
+        <option value="$PROJECT_DIR$/26-Stripe Follow Along Nav/index.html" />
       </list>
     </option>
   </component>
@@ -60,9 +85,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="675" />
-    <option name="y" value="50" />
-    <option name="width" value="466" />
+    <option name="x" value="237" />
+    <option name="y" value="23" />
+    <option name="width" value="628" />
     <option name="height" value="709" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -83,7 +108,7 @@
             <path>
               <item name="js-30" type="b2602c69:ProjectViewProjectNode" />
               <item name="js-30" type="462c0819:PsiDirectoryNode" />
-              <item name="25-Event Capture" type="462c0819:PsiDirectoryNode" />
+              <item name="26-Stripe Follow Along Nav" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -126,18 +151,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1530221351145</updated>
-      <workItem from="1530221352682" duration="23861000" />
+      <workItem from="1530221352682" duration="35118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23861000" />
+    <option name="totallyTimeSpent" value="35118000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="675" y="50" width="466" height="709" extended-state="0" />
+    <frame x="237" y="23" width="628" height="709" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24678111" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1513158" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -232,6 +257,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/26-Stripe Follow Along Nav/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="78" column="25" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/26-Stripe Follow Along Nav/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
         </state>
       </provider>
     </entry>
